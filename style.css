@@ -1,10 +1,12 @@
 :root {
-  --blue: #2563eb;
+  --blue: rgb(37, 99, 235);
   --blue-dark: #1d4ed8;
-  --ink: #111827;
-  --body: #374151;
-  --line: #e5e7eb;
-  --soft: #f9fafb;
+  --ink: rgb(17, 24, 39);
+  --body: rgb(55, 65, 81);
+  --line: rgb(229, 231, 235);
+  --soft: rgb(249, 250, 251);
+  --navbar-glass: rgba(255, 255, 255, 0.678);
+  --navbar-hover: rgba(17, 15, 15, 0.1);
 }
 
 * {
@@ -21,4 +23,189 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
   line-height: 1.6;
+}
+
+/* topbar */
+.topbar {
+  position: fixed;
+  z-index: 50;
+  inset: 0 0 auto;
+  background: var(--navbar-glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-content {
+    padding: 0.75rem 3rem;
+  }
+}
+
+.brand-name > a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    color: var(--body);
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.desktop-menu > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.desktop-menu > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--blue);
+  transition: width 0.2s ease;
+}
+
+.desktop-menu > a:hover {
+  color: var(--ink);
+}
+
+.desktop-menu > a:hover::after {
+  width: 100%;
+}
+
+/* hamburger btn */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  padding: 0.5rem 0.35rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+  z-index: 100;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+
+.hamburger-btn:hover {
+  background: var(--navbar-hover);
+}
+
+.hamburger-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--ink);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* animasi tiap garis menjadi silang (hanya butuh 2 jadi yg tengah hapus) --> saat punya class active */
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: var(--navbar-glass);
+  z-index: 40; /* agak di bawah topbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  z-index: 35;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.sidebar-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .sidebar-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+.sidebar-menu-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sidebar-link {
+  color: var(--body);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sidebar-link:active {
+  color: var(--blue);
 }
