@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ahmad Fakhrul Bawani — developer portfolio"
+    />
+    <title>AFB — Ahmad Fakhrul Bawani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+    <div class="grid-glow"></div>
+    <header class="site-header">
+      <nav class="nav glass">
+        <a class="brand" href="#home" aria-label="Back to top"
+          ><span class="mark">AFB</span
+          ><span class="brand-name">Ahmad Fakhrul<br /><b>Bawani</b></span></a
+        >
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a><a href="#projects">Projects</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <a class="nav-cta" href="#contact">Let&apos;s talk <span>↗</span></a>
+        <button
+          class="menu-button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img
+          class="hero-background"
+          src="./public/hero-background.jpeg"
+          alt="Programming code on a computer display"
+        />
+        <div class="hero-wash"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><i></i> Available for collaboration</p>
+            <h1>Hi, I&apos;m <em>Ahmad.</em></h1>
+            <p class="hero-lead">
+              I shape thoughtful digital products where clean code meets a
+              sharp, human interface.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects"
+                >View selected work <span>↘</span></a
+              ><a class="button secondary" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <figure class="portrait hero-portrait glass">
+            <img
+              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=900&h=1150&fit=crop&auto=format"
+              alt="Portrait placeholder for Ahmad Fakhrul Bawani"
+            />
+            <figcaption>
+              <small>Developer / designer</small
+              ><span>Building from curiosity.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="split-intro">
+          <div>
+            <p class="eyebrow">01 / About</p>
+            <h2>A systems thinker with an eye for detail.</h2>
+          </div>
+          <div class="glass intro-panel">
+            <p>
+              I&apos;m Ahmad Fakhrul Bawani, a developer who enjoys translating
+              ambitious ideas into clear, resilient experiences. I care about
+              the tiny decisions that make software feel effortless — from the
+              architecture underneath to the last pixel on screen.
+            </p>
+            <div class="principles">
+              <div>
+                <small>Approach</small
+                ><span
+                  >Curious, collaborative, and always iterating toward
+                  clarity.</span
+                >
+              </div>
+              <div>
+                <small>Focus</small
+                ><span
+                  >Product engineering, developer tools, and polished
+                  interfaces.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="stack-title">
+            <div>
+              <p class="eyebrow">02 / Toolkit</p>
+              <h2>Tech stack</h2>
+            </div>
+            <b>&lt;/&gt;</b>
+          </div>
+          <div class="stack-grid" id="stack-grid"></div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Selected work</p>
+            <h2>Things I&apos;ve been building.</h2>
+          </div>
+          <p>
+            A few exploratory projects where structure, story, and interaction
+            work together.
+          </p>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-heading">
+          <p class="eyebrow">04 / Contact</p>
+          <h2>Let&apos;s make something <em>remarkable.</em></h2>
+        </div>
+        <div class="contact-grid glass">
+          <form id="contact-form">
+            <p>
+              Have an idea, an opportunity, or a difficult problem worth
+              solving? Send a note and I&apos;ll get back to you.
+            </p>
+            <div class="form-row">
+              <label
+                >Name<input
+                  required
+                  name="name"
+                  placeholder="Your name" /></label
+              ><label
+                >Email<input
+                  required
+                  name="email"
+                  type="email"
+                  placeholder="you@email.com"
+              /></label>
+            </div>
+            <label
+              >Message<textarea
+                required
+                name="message"
+                rows="5"
+                placeholder="Tell me a little about it..."
+              ></textarea></label
+            ><button class="button primary" type="submit">
+              Send message <span>↗</span></button
+            ><output id="form-status" aria-live="polite"></output>
+          </form>
+          <aside class="contact-aside">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&h=1000&fit=crop&auto=format"
+              alt="Portrait placeholder for Ahmad Fakhrul Bawani"
+            />
+            <div class="aside-wash"></div>
+            <div class="socials">
+              <small>Elsewhere online</small>
+              <div>
+                <a href="#" aria-label="LinkedIn">in <span>LinkedIn</span></a
+                ><a href="#" aria-label="GitHub">◉ <span>GitHub</span></a
+                ><a href="#" aria-label="Instagram">◎ <span>Instagram</span></a
+                ><a href="#" aria-label="Codeberg">⌘ <span>Codeberg</span></a>
+              </div>
+              <a class="email" href="mailto:hello@ahmadbawani.dev"
+                >✉ hello@ahmadbawani.dev</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <span class="mark mini">AFB</span
+        ><span>© <span id="year"></span> Ahmad Fakhrul Bawani</span>
+      </div>
+      <p>✦ Designed with intent &amp; a little curiosity</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
