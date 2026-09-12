@@ -5,11 +5,16 @@
   --body: rgb(55, 65, 81);
   --line: rgb(229, 231, 235);
   --soft: rgb(249, 250, 251);
+  /* topbar/navbar */
   --navbar-glass: rgba(255, 255, 255, 0.678);
   --navbar-hover: rgba(17, 15, 15, 0.1);
+  /* footer */
   --footer-bg: #111827;
   --footer: #f9fafbcc;
   --footer-border: #f9fafb1a;
+  /* main */
+  --bg-hero1: #eff6ff;
+  --bg-hero2: #e0e7ff;
 }
 
 * {
@@ -26,6 +31,41 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
   line-height: 1.6;
+}
+
+/* universal */
+.btn-solid {
+  background-color: var(--blue);
+  color: var(--soft);
+  border: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border: 1px var(--blue) solid;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-solid:hover {
+  opacity: 0.9;
+}
+
+.btn-outline:hover {
+  opacity: 0.7;
+}
+
+.btn-solid:active {
+  opacity: 0.6;
+}
+
+.btn-outline:active {
+  background-color: var(--blue);
+  color: var(--soft);
+  opacity: 1;
 }
 
 /* topbar */
@@ -302,4 +342,86 @@ body {
   margin-top: 1rem;
   padding-top: 1rem;
   font-size: small;
+}
+
+/* main content */
+
+.main-content {
+  padding: 0 0 5rem 0;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--bg-hero1), var(--bg-hero2));
+  padding: 3rem;
+  text-align: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    gap: 2rem;
+  }
+}
+
+.hero h1 > span {
+  color: var(--blue);
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hero h1 > span {
+    display: inline;
+  }
+  .hero {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    font-size: 32px;
+  }
+}
+
+.hero-btn {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-btn-element {
+  border-radius: 0.7rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .hero-btn-element {
+    font-size: large;
+    padding: 1rem 2rem;
+  }
+  .hero-btn {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-btn-element {
+    font-size: x-large;
+  }
 }
