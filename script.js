@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // kita ingin ketika klik link otomatis tertutup jadi tambahkan ke tiap link
   sidebarLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      if (mobileSidebar.classList.contains('open')) {
-        toggleMenu();
-      }
+      toggleMenu();
     });
   });
 });
