@@ -1,0 +1,121 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg-hero2);
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Loader animation */
+.loader {
+  width: 120px;
+  height: 20px;
+
+  background:
+    linear-gradient(var(--blue) 50%, #0000 0),
+    linear-gradient(#0000 50%, var(--blue) 0),
+    linear-gradient(var(--blue) 50%, #0000 0),
+    linear-gradient(#0000 50%, var(--blue) 0),
+    linear-gradient(var(--blue) 50%, #0000 0),
+    linear-gradient(#0000 50%, var(--blue) 0) #ffffff;
+
+  background-size: calc(100% / 6 + 1px) 200%;
+  background-repeat: no-repeat;
+
+  animation: loader-animation 1.7s infinite;
+}
+
+@keyframes loader-animation {
+  0% {
+    background-position:
+      calc(0 * 100% / 5) 100%,
+      calc(1 * 100% / 5) 0%,
+      calc(2 * 100% / 5) 100%,
+      calc(3 * 100% / 5) 0%,
+      calc(4 * 100% / 5) 100%,
+      calc(5 * 100% / 5) 0%;
+  }
+
+  16.67% {
+    background-position:
+      calc(0 * 100% / 5) 0%,
+      calc(1 * 100% / 5) 0%,
+      calc(2 * 100% / 5) 100%,
+      calc(3 * 100% / 5) 0%,
+      calc(4 * 100% / 5) 100%,
+      calc(5 * 100% / 5) 0%;
+  }
+
+  33.33% {
+    background-position:
+      calc(0 * 100% / 5) 0%,
+      calc(1 * 100% / 5) 100%,
+      calc(2 * 100% / 5) 100%,
+      calc(3 * 100% / 5) 0%,
+      calc(4 * 100% / 5) 100%,
+      calc(5 * 100% / 5) 0%;
+  }
+
+  50% {
+    background-position:
+      calc(0 * 100% / 5) 0%,
+      calc(1 * 100% / 5) 100%,
+      calc(2 * 100% / 5) 0%,
+      calc(3 * 100% / 5) 0%,
+      calc(4 * 100% / 5) 100%,
+      calc(5 * 100% / 5) 0%;
+  }
+
+  66.67% {
+    background-position:
+      calc(0 * 100% / 5) 0%,
+      calc(1 * 100% / 5) 100%,
+      calc(2 * 100% / 5) 0%,
+      calc(3 * 100% / 5) 100%,
+      calc(4 * 100% / 5) 100%,
+      calc(5 * 100% / 5) 0%;
+  }
+
+  83.33% {
+    background-position:
+      calc(0 * 100% / 5) 0%,
+      calc(1 * 100% / 5) 100%,
+      calc(2 * 100% / 5) 0%,
+      calc(3 * 100% / 5) 100%,
+      calc(4 * 100% / 5) 0%,
+      calc(5 * 100% / 5) 0%;
+  }
+
+  100% {
+    background-position:
+      calc(0 * 100% / 5) 0%,
+      calc(1 * 100% / 5) 100%,
+      calc(2 * 100% / 5) 0%,
+      calc(3 * 100% / 5) 100%,
+      calc(4 * 100% / 5) 0%,
+      calc(5 * 100% / 5) 100%;
+  }
+}
+
+.loader-brand-name {
+  color: var(--blue);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}

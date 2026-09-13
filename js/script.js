@@ -1,4 +1,5 @@
 // dom
+const topbar = document.querySelector('.topbar');
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobileSidebar = document.getElementById('mobileSidebar');
 const sidebarLinks = document.querySelectorAll('.sidebar-link');
@@ -42,4 +43,9 @@ const lenis = new Lenis({
 // Listen for the scroll event and log the event data
 lenis.on('scroll', (e) => {
   console.log(e);
+});
+
+// jika discroll >100px hidupkan background topbar
+window.addEventListener('scroll', () => {
+  topbar.classList.toggle('scrolled', window.scrollY > 100);
 });

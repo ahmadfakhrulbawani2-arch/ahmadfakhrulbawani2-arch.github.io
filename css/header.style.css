@@ -1,11 +1,21 @@
 .topbar {
   position: fixed;
-  z-index: 50;
   inset: 0 0 auto;
+  z-index: 50;
+
+  background: transparent;
+  border-bottom: 1px solid transparent;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.topbar.scrolled {
   background: var(--navbar-glass);
+  border-bottom-color: var(--line);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-  width: 100%;
 }
 
 .navbar-content {

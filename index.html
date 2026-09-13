@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/header.style.css" />
     <link rel="stylesheet" href="css/main.style.css" />
     <link rel="stylesheet" href="css/footer.style.css" />
+    <link rel="stylesheet" href="css/lazy-loader.style.css" />
 
     <!-- libs -->
     <!-- lenis: https://github.com/darkroomengineering/lenis/blob/main/README.md -->
@@ -43,6 +44,13 @@
     />
   </head>
   <body>
+    <!-- page lazy loader -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-content">
+        <div class="loader"></div>
+      </div>
+    </div>
+
     <nav class="topbar">
       <div class="navbar-content">
         <div class="brand-name">
@@ -244,7 +252,9 @@
         <p>&copy; 2026 Ahmad Fakhrul Bawani. All rights reserved.</p>
       </div>
     </footer>
+
     <!-- js -->
     <script src="js/script.js"></script>
+    <script src="js/lazy-loader.script.js"></script>
   </body>
 </html>
