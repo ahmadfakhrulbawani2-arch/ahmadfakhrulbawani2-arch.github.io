@@ -1,0 +1,79 @@
+[
+  {
+    "name": "React",
+    "icon": "public/icons/React-icon.svg.webp"
+  },
+  {
+    "name": "Next Js",
+    "icon": "public/icons/next-js-icon.png"
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "public/icons/tailwindcss-icon.png"
+  },
+  {
+    "name": "Express Js",
+    "icon": "public/icons/expressjs-icon.png"
+  },
+  {
+    "name": "Gin Gonic",
+    "icon": "public/icons/gin-icon.svg"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "public/icons/postgre-icon.png",
+    "iconStyle": {
+      "width": "60px"
+    },
+    "credit": {
+      "href": "https://www.flaticon.com/free-icons/postgre",
+      "title": "postgre icons"
+    }
+  },
+  {
+    "name": "MySQL",
+    "icon": "public/icons/MySQL-Logo.png",
+    "iconStyle": {
+      "width": "100px"
+    }
+  },
+  {
+    "name": "Figma",
+    "icon": "public/icons/Figma-logo.svg.webp",
+    "iconStyle": {
+      "width": "30px"
+    }
+  },
+  {
+    "name": "Docker",
+    "icon": "public/icons/docker-icon.png"
+  },
+  {
+    "name": "C",
+    "icon": "public/icons/C_Programming_Language.svg.webp"
+  },
+  {
+    "name": "C++",
+    "icon": "public/icons/ISO_C++_Logo.svg.webp"
+  },
+  {
+    "name": "C#",
+    "icon": "public/icons/Logo_C_sharp.svg.webp"
+  },
+  {
+    "name": "Java",
+    "icon": "public/icons/java-icon.png",
+    "credit": {
+      "href": "https://www.flaticon.com/free-icons/java",
+      "title": "java icons"
+    }
+  },
+  {
+    "name": "Python",
+    "icon": "public/icons/Python-logo-notext.svg.webp"
+  },
+  {
+    "name": "Go",
+    "icon": "public/icons/Go-Logo_Blue.svg"
+  }
+]
