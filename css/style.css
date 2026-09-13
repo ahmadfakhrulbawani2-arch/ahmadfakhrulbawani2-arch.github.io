@@ -27,6 +27,26 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) transparent;
+}
+
+/* styling scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-dark);
 }
 
 body {
@@ -44,6 +64,42 @@ body {
     sans-serif;
   color: var(--ink);
   line-height: 1.6;
+}
+
+/* back to top btn */
+.back-to-top {
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
+  z-index: 40;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 100%;
+  background: var(--navbar-glass);
+  backdrop-filter: blur(8px);
+  color: var(--blue);
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 100;
+  transition: all ease-in-out 0.25s;
+}
+
+.back-to-top:hover {
+  background: var(--soft);
+  transform: translateY(-3px);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* universal */
@@ -163,21 +219,30 @@ body {
 .hero-btn {
   margin-top: 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-btn {
+    flex-direction: row;
+  }
 }
 
 .hero-btn-element {
   border-radius: 0.7rem;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .hero-btn-element {
     font-size: large;
     padding: 1rem 2rem;
+    max-width: fit-content;
   }
   .hero-btn {
     margin-top: 4rem;
