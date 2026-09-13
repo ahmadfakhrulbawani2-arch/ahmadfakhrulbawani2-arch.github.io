@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize Lenis
 const lenis = new Lenis({
   autoRaf: true,
+  anchors: true,
 });
 
 // Listen for the scroll event and log the event data
