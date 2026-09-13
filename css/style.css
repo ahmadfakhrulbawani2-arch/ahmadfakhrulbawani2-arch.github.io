@@ -28,7 +28,18 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   color: var(--ink);
   line-height: 1.6;
 }
@@ -66,6 +77,28 @@ body {
   background-color: var(--blue);
   color: var(--soft);
   opacity: 1;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.image-frame-1 {
+  border: 5px dashed var(--blue);
+  border-radius: 16px;
 }
 
 /* topbar */
@@ -347,6 +380,10 @@ body {
 /* main content */
 
 .main-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
   padding: 0 0 5rem 0;
 }
 
@@ -424,4 +461,95 @@ body {
   .hero-btn-element {
     font-size: x-large;
   }
+}
+
+.section {
+  padding: 1rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 1.5rem 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 2rem 15rem;
+  }
+}
+
+.about-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .about-section-container {
+    flex-direction: row;
+  }
+  .about-section-images {
+    order: 2;
+  }
+
+  .about-section-description {
+    order: 1;
+  }
+}
+
+.about-section-images {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.image-shimmer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-shimmer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.image-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 80%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.image-shimmer:hover::after {
+  transform: translateX(100%);
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1024px) {
+  .about-section-images img {
+    max-width: 100%;
+  }
+}
+
+.about-section-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
