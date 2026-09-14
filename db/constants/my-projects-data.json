@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Jump! Jump!",
+    "description": "2D Platformer game as the first game I made using contruct 3 with the help of itch.io game assets. Total of 90k lines of JS code",
+    "image": {
+      "src": "./public/game-platform-gweh.png",
+      "alt": "Simple 2D Game"
+    },
+    "tags": ["Construct 3", "Itch.io", "Vanilla JS"],
+    "links": {
+      "github": "https://github.com/ahmadfakhrulbawani2-arch/GIGAJAM_Game-Platform-Gweh/tree/main",
+      "demo": "https://helpful-cascaron-0d931e.netlify.app/"
+    }
+  },
+
+  {
+    "title": "Himasakta ITS Website",
+    "description": "Official Himasakta ITS website built with modern NextJS and Go Gin Framework",
+    "image": {
+      "src": "./public/himasakta-its.png",
+      "alt": "Himasakta ITS"
+    },
+    "tags": ["Next.js", "Go", "Docker", "Cloudflare"],
+    "links": {
+      "github": "https://github.com/HIMASAKTA-DEV",
+      "demo": "https://himasakta-its.com/"
+    }
+  },
+
+  {
+    "title": "Wowo Ideas Experimental Smart Contract",
+    "description": "Experimental project on making simple smart contract in ethereum. Built with modern hardhat solidity framework. Available on SepoliaEth Testnet!",
+    "image": {
+      "src": "./public/wowo-ideas-experimental.png",
+      "alt": "Wowo Ideas Experimental"
+    },
+    "tags": ["Hardhat", "Solidity", "Ethereum"],
+    "links": {
+      "github": "https://github.com/ahmadfakhrulbawani2-arch/Wowo-Ideas-Smart-Contract-Experimental/tree/main",
+      "demo": "https://sepolia.etherscan.io/address/0xEFFE1F4aF2DbC7D2538E4Cc5f39ACc9a5DEaEd8D"
+    }
+  }
+]

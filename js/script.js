@@ -1,5 +1,7 @@
 import { LoadTechStack } from './components/LoadTechStack.js';
+import { LoadWorksAndProjects } from './components/LoadWorksAndProjects.js';
 
+LoadWorksAndProjects();
 LoadTechStack();
 
 // dom

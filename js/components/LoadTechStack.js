@@ -1,5 +1,4 @@
 import techStackData from '../../db/constants/tech-stack-data.json' with { type: 'json' };
-
 import { JsonToCss } from '../utils/JsonToCss.js';
 
 const container = document.querySelector('#techStack');
