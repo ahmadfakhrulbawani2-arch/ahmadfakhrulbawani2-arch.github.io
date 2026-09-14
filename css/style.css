@@ -258,6 +258,11 @@ body {
 .section {
   padding: 1rem 1.5rem;
   scroll-margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -273,12 +278,7 @@ body {
 }
 
 .about-section-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  gap: 4rem;
 }
 
 .about-section-description {
@@ -360,6 +360,7 @@ body {
   width: 100%;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  justify-items: center;
 }
 
 @media (min-width: 540px) {
@@ -388,7 +389,7 @@ body {
 
 .tech-stack-element img {
   width: 50px;
-  height: auto;
+  height: 50px;
 }
 
 .tech-stack-element {
@@ -404,11 +405,11 @@ body {
   gap: 1rem;
   border-radius: 1rem;
   transition: box-shadow 0.2s;
+  border: 2px var(--soft-2-hover) solid;
 }
 
 .tech-stack-element:hover {
   box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.1);
-  border: 2px var(--soft-2-hover) solid;
 }
 
 .tech-stack-container {
