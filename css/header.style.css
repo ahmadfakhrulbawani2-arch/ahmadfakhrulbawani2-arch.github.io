@@ -76,7 +76,7 @@
   position: relative;
 }
 
-.desktop-menu > button {
+.theme-btn {
   padding: 1rem;
   border-radius: 999rem;
   border: none;
@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 
-.desktop-menu > button:hover {
+.theme-btn:hover {
   background-color: var(--navbar-hover);
 }
 
@@ -141,8 +141,15 @@
   border-radius: 2px;
 }
 
+.mobile-topbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
-  .hamburger-btn {
+  .mobile-topbar {
     display: none;
   }
 }

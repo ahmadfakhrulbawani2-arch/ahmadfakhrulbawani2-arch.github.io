@@ -21,7 +21,7 @@ const contactFormResult = document.getElementById('contactFormResult');
 const sendEmailBtn = contactForm.querySelector(
   'button.send-email[type="submit"]'
 );
-const themeBtn = document.getElementById('themeBtn');
+const themeBtn = document.querySelectorAll('.theme-btn');
 
 // lenis
 // Initialize Lenis
@@ -110,9 +110,11 @@ const updateTheme = (event) => {
   const isDark = theme === 'dark';
 
   document.documentElement.setAttribute('data-theme', theme);
-  themeBtn.innerHTML = isDark
-    ? `<i class="fa-regular fa-sun"></i>`
-    : `<i class="fa-solid fa-moon"></i>`;
+  themeBtn.forEach((btn) => {
+    btn.innerHTML = isDark
+      ? `<i class="fa-regular fa-sun"></i>`
+      : `<i class="fa-solid fa-moon"></i>`;
+  });
 };
 
 updateTheme(mediaQuery);
@@ -122,16 +124,23 @@ const toggleTheme = (e) => {
 
   const html = document.documentElement;
   const isDark = html.dataset.theme === 'dark';
+  const newTheme = isDark ? 'light' : 'dark';
 
-  html.dataset.theme = isDark ? 'light' : 'dark';
-  themeBtn.innerHTML =
-    html.dataset.theme === 'dark'
+  html.dataset.theme = newTheme;
+
+  const newIsDark = newTheme === 'dark';
+
+  themeBtn.forEach((btn) => {
+    btn.innerHTML = newIsDark
       ? `<i class="fa-regular fa-sun"></i>`
       : `<i class="fa-solid fa-moon"></i>`;
+  });
 };
 
 mediaQuery.addEventListener('change', updateTheme);
-themeBtn.addEventListener('click', toggleTheme);
+themeBtn.forEach((btn) => {
+  btn.addEventListener('click', toggleTheme);
+});
 
 // loader
 const loadingScreen = document.querySelector('#loadingScreen');

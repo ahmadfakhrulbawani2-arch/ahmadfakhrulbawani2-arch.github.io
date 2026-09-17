@@ -64,22 +64,26 @@
 
         <!-- dekstop -->
         <div class="desktop-menu">
-          <button id="themeBtn"></button>
+          <button class="theme-btn"></button>
           <a href="#about">About</a>
           <a href="#works">Projects</a>
           <a href="#contact">Contact</a>
         </div>
 
-        <!-- hamburger btn mobile -->
-        <button
-          class="hamburger-btn"
-          aria-label="Toggle Menu"
-          id="hamburgerBtn"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <!-- mobile -->
+        <div class="mobile-topbar">
+          <button class="theme-btn"></button>
+          <!-- hamburger btn mobile -->
+          <button
+            class="hamburger-btn"
+            aria-label="Toggle Menu"
+            id="hamburgerBtn"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
       <!-- progress of page scroll -->
       <div class="scroll-progress">
@@ -230,6 +234,5 @@
 
     <!-- js -->
     <script src="js/script.js" type="module"></script>
-    <script src="js/lazy-loader.script.js" type="module"></script>
   </body>
 </html>
