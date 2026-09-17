@@ -21,6 +21,7 @@ const contactFormResult = document.getElementById('contactFormResult');
 const sendEmailBtn = contactForm.querySelector(
   'button.send-email[type="submit"]'
 );
+const themeBtn = document.getElementById('themeBtn');
 
 // lenis
 // Initialize Lenis
@@ -101,3 +102,46 @@ const submitContactForm = async (event) => {
 };
 
 contactForm.addEventListener('submit', submitContactForm);
+
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+const updateTheme = (event) => {
+  const theme = event.matches ? 'dark' : 'light';
+  const isDark = theme === 'dark';
+
+  document.documentElement.setAttribute('data-theme', theme);
+  themeBtn.innerHTML = isDark
+    ? `<i class="fa-regular fa-sun"></i>`
+    : `<i class="fa-solid fa-moon"></i>`;
+};
+
+updateTheme(mediaQuery);
+
+const toggleTheme = (e) => {
+  e.preventDefault();
+
+  const html = document.documentElement;
+  const isDark = html.dataset.theme === 'dark';
+
+  html.dataset.theme = isDark ? 'light' : 'dark';
+  themeBtn.innerHTML =
+    html.dataset.theme === 'dark'
+      ? `<i class="fa-regular fa-sun"></i>`
+      : `<i class="fa-solid fa-moon"></i>`;
+};
+
+mediaQuery.addEventListener('change', updateTheme);
+themeBtn.addEventListener('click', toggleTheme);
+
+// loader
+const loadingScreen = document.querySelector('#loadingScreen');
+
+const minimumLoadingTime = 1500;
+
+window.addEventListener('load', () => {
+  lenis.stop();
+  setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+    lenis.start();
+  }, minimumLoadingTime);
+});

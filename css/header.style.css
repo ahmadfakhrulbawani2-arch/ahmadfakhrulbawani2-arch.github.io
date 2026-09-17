@@ -76,6 +76,23 @@
   position: relative;
 }
 
+.desktop-menu > button {
+  padding: 1rem;
+  border-radius: 999rem;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: var(--body);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  cursor: pointer;
+}
+
+.desktop-menu > button:hover {
+  background-color: var(--navbar-hover);
+}
+
 .desktop-menu > a::after {
   content: '';
   position: absolute;
