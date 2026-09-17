@@ -152,7 +152,47 @@
           <div class="works-grid" id="worksGrid"></div>
         </div>
       </section>
-      <section class="contact-section section" id="contact"></section>
+      <section class="contact-section section" id="contact">
+        <div class="contact-section-header">
+          <h3 class="section-title">Contact Me</h3>
+          <p>Let's get connected!</p>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <label for="name"
+              >Your name <span class="required-star">*</span></label
+            >
+            <input
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              id="name"
+              required
+            />
+            <label for="email"
+              >Email <span class="required-star">*</span></label
+            >
+            <input
+              type="email"
+              name="email"
+              placeholder="johndoe@email.com"
+              id="email"
+              required
+            />
+            <label for="message"
+              >Message <span class="required-star">*</span></label
+            >
+            <textarea
+              name="message"
+              placeholder="Your message"
+              id="message"
+              required
+            ></textarea>
+            <button type="submit" class="send-email">Send Message</button>
+            <p id="contactFormResult"></p>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
